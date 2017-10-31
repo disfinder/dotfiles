@@ -112,7 +112,7 @@ alias ls='gls --color'
 alias ll='gls -lh --time-style long-iso --color'
 
 #grc
-source /Users/disfinder/opt/grc.bashrc
+#source /Users/disfinder/opt/grc.bashrc
 # alias ll='gls -lh --time-style long-iso'
 
 
@@ -141,7 +141,3 @@ diff_meld() {
 open -W -a Meld --args $1 $2
 
 }
-
-source /Users/disfinder/opt/bin/bash/flipp_alias.bash
-
-source '/usr/local/Cellar/awscli/1.11.150/libexec/bin/aws_bash_completer'
