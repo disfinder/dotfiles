@@ -1,0 +1,30 @@
+export HISTCONTROL=ignoreboth:erasedups
+shopt -s histappend
+PROMPT_COMMAND='history -a; history -c; history -r'
+export HISTFILESIZE=
+export HISTSIZE=
+export HISTTIMEFORMAT="[%F %T] "
+export HISTIGNORE="ls:ps:history"
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+alias gs='git status'
+alias gl='git ls'
+alias gd='git diff'
+alias gdt='git difftool'
+
+alias ll='ls -alh'
+
+if [ -t 1 ]
+then
+    # we have a tty
+    bind '"\e[A": history-search-backward'
+    bind '"\e[B": history-search-forward'
+fi
+
+
+__git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
+__git_branch_color="\[\033[36m\]"
+__last_color="\[\033[00m\]"
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\] $__git_branch_color$__git_branch\n$__last_color\$"
