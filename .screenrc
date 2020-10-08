@@ -1,0 +1,7 @@
+caption always "%{= 45}%{+b w}Screen: %n | %h %=%t %c"
+hardstatus alwayslastline
+hardstatus string '%{= kG}%-Lw%{= kW}%50> %n*%f %t%{= kG}%+Lw%< %{= kG}%-=%D %m/%d/%y | %C:%s %A | %1`%{-}'
+
+# for ctrl right and left arrows
+bindkey ^[[1;5D prev
+bindkey ^[[1;5C next
