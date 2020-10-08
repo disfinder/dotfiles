@@ -27,4 +27,4 @@ fi
 __git_branch='`git branch 2> /dev/null | grep -e ^* | sed -E  s/^\\\\\*\ \(.+\)$/\(\\\\\1\)\ /`'
 __git_branch_color="\[\033[36m\]"
 __last_color="\[\033[00m\]"
-export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\] $__git_branch_color$__git_branch\n$__last_color\$"
+export PS1="\[\e]0;\w\a\]\n\[\e[32m\]\u@\h \[\e[33m\]\w\[\e[0m\] $__git_branch_color$__git_branch\n$__last_color\$ "
